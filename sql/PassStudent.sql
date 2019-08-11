@@ -1,4 +1,4 @@
-SELECT student.id, student.name,COUNT(subject.id),subject.name, SUM(mark.mark)
+SELECT student.id, student.name,subject.name as SubjectName, SUM(mark.mark)
 FROM turing_second_batch.mark
 JOIN student ON student.id = mark.student_id
 JOIN subject ON subject.id = mark.subject_id
